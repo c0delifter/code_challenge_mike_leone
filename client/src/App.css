@@ -1,0 +1,44 @@
+.actionIconsDiv {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  min-width: 40px;
+}
+
+.fade-enter {
+  opacity: 0.01;
+}
+
+.fade-enter-active {
+  opacity: 1;
+  transition: opacity 1000ms ease-in;
+}
+
+.fade-exit {
+  opacity: 1;
+}
+
+.fade-exit-active {
+  opacity: 0.01;
+  transition: opacity 1000ms ease-in;
+}
+
+.rating {
+  font-size: 1.5em;
+}
+
+.postTitle {
+  font-size: 1.5em;
+  display: inline !important;
+}
+
+.actionBtn:hover {
+  cursor: pointer !important;
+}
+
+.ratingCtrlBtn {
+  font-size: 0.75em;
+  line-height: 30px;
+  height: 30px;
+  padding: 0 0.5em;
+}
