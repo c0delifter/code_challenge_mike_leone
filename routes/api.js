@@ -21,15 +21,26 @@ router.post('/', (req, res) => {
 
 router.post('/update/:id', (req, res) => {
     const {title, body, rating, tags} = req.body;
-
     post.updateOne({
         _id: req.params.id
     }, {
             $set: {
                 title: title,
                 body: body,
-                rating: rating,
                 tags: tags
+            }
+        })
+        .then(post => {res.status(200).json({success: true})})
+        .catch((err) => res.send(404).json({success: false}))
+});
+
+router.post('/updateRating/:id', (req, res) => {
+    const {rating} = req.body;
+    post.updateOne({
+        _id: req.params.id
+    }, {
+            $set: {
+                rating: rating
             }
         })
         .then(post => {res.status(200).json({success: true})})

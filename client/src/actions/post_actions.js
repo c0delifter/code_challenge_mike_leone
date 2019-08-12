@@ -45,7 +45,7 @@ export const editPost = (post) => dispatch => {
 export const changeRating = (post) => dispatch => {
     // return {type: UPDATE_RATING, payload: post}
     axios
-    .post(`/api/update/${post._id}`, post)
+    .post(`/api/updateRating/${post._id}`, post)
     .then(res => dispatch({type: UPDATE_RATING, payload: post}));
 }
 
